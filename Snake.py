@@ -36,10 +36,11 @@ class Snake:
     def check_outofbounds(self):
         for segment in self.body:
             x,y = segment
-            if x > 500 or x < 0:
+            if x >= 500 or x <= 0:
                 return True
-            elif y > 500 or y < 0:
+            elif y >= 500 or y <= 0:
                 return True
+        return False
 
     def draw(self):
         for segment in self.body:
