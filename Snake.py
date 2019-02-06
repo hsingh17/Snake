@@ -44,7 +44,7 @@ class Snake:
 
     def draw(self):
         for segment in self.body:
-            pygame.draw.rect(window, (255,0,0), (*segment, 10, 10))
+            pygame.draw.rect(window, WHITE, (*segment, 10, 10))
 
     def get_head_cords(self):
         return self.head
@@ -58,20 +58,20 @@ class Apple:
        self.cords = (random.randrange(0,500,10), random.randrange(0,500,10)) 
 
     def draw(self):
-        pygame.draw.rect(window, (0,255,0), (*self.cords,10,10))
+        pygame.draw.rect(window, RED, (*self.cords,10,10))
 
     def get_cords(self):
         return self.cords
     
 
 def game_over():    
-    game_over_msg = large_font.render('Game Over!', True, (0,0,0))
-    instructions = small_font.render('Press Q to exit or R to restart!', True, (0,0,0))
+    game_over_msg = LARGE_FONT.render('Game Over!', True, WHITE)
+    instructions = SMALL_FONT.render('Press Q to exit or R to restart!', True, WHITE)
     window.blit(instructions, (100, 240))
     window.blit(game_over_msg, (80, 160))
 
 def display_score(score):
-    score_msg = small_font.render(f'Score: {score}', True, (0,0,0))
+    score_msg = SMALL_FONT.render(f'Score: {score}', True, WHITE)
     window.blit(score_msg, (30,30))
 
 
@@ -122,7 +122,7 @@ def game_loop():
         if snake.check_collision() or snake.check_outofbounds():
             lose = True
 
-        window.fill((255,255,255))
+        window.fill(BLACK)
         snake.draw()
         apple.draw()
         display_score(score)
@@ -131,11 +131,17 @@ def game_loop():
         
     pygame.quit()
 
+
 pygame.init()
 pygame.font.init()
 
-small_font = pygame.font.SysFont('Arial', 25, bold = 1)
-large_font = pygame.font.SysFont('Arial', 75, bold = 1)
+WHITE = (255,255,255)
+BLACK = (0,0,0)
+RED = (255,0,0)
+SMALL_FONT = pygame.font.SysFont('Arial', 25, bold = 1)
+LARGE_FONT = pygame.font.SysFont('Arial', 75, bold = 1)
+
+
 window = pygame.display.set_mode((500, 500))
 pygame.display.set_caption("Snake")
 
