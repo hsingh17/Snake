@@ -20,15 +20,15 @@ For Windows, follow this [link](https://www.python.org/downloads/windows/).
 
 ## PyGame
 To install Pygame through the terminal, use the following (skip to second line if PIP is already installed):
-`$ sudo apt install python3-pip
- $ pip3 install pygame
+`$ sudo apt install python3-pip`
+ $ pip3 install pygame`
 `
 Or you could go to the [PyGame website](https://www.pygame.org/news)
 
 # Playing
 To play the game you can either do `$ python3 Snake.py`, or:
-`$ chmod +x Snake.py
- $ ./Snake.py
+`$ chmod +x Snake.py`
+ $ ./Snake.py`
 `
 #Instructions
 Use the arrow keys to control the snake, `Q` to quit after dying, `R` to restart after death.
