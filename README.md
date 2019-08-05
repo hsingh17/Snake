@@ -12,16 +12,18 @@ Before running this Snake game, some prerequisites:
 ## Python3
 To install Python3 through the terminal, run the following:
 
-`$ sudo apt-get update
- $ sudo apt-get install python3.6
-`
+`$ sudo apt-get update`
+
+`$ sudo apt-get install python3.6`
+
 For Windows, follow this [link](https://www.python.org/downloads/windows/).
 
 ## PyGame
 To install Pygame through the terminal, use the following (skip to second line if PIP is already installed):
 
 `$ sudo apt install python3-pip`
-` $ pip3 install pygame`
+
+`$ pip3 install pygame`
 
 Or you could go to the [PyGame website](https://www.pygame.org/news)
 
@@ -29,6 +31,7 @@ Or you could go to the [PyGame website](https://www.pygame.org/news)
 To play the game you can either do `$ python3 Snake.py`, or:
 
 `$ chmod +x Snake.py`
+
 ` $ ./Snake.py`
 
 #Instructions
