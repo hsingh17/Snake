@@ -1,7 +1,7 @@
+#!/usr/bin/env python3
 import pygame
 import random
 import time
-
 
 class Snake:
     def __init__(self):
@@ -10,14 +10,11 @@ class Snake:
         self.tail = self.body[len(self.body) - 1]
 
     def move(self, x_velocity, y_velocity):
-        new_body = []
         self.body.pop()
         x,y = self.head
         x += x_velocity
         y += y_velocity
-        new_body.append((x,y))
-        new_body.extend(self.body)
-        self.body = new_body
+        self.body.insert(0, (x,y))
         self.head = self.body[0]
         self.tail = self.body[len(self.body) - 1]
         
